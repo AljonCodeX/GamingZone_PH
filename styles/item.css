@@ -1,0 +1,149 @@
+ @font-face {
+    font-family: 'Nunito';
+    src: url('../assets/fonts/nunito-regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Nunito';
+    src: url('../assets/fonts/nunito-600.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Nunito';
+    src: url('../assets/fonts/nunito-700.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Rajdhani';
+    src: url('../assets/fonts/rajdhani-regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Rajdhani';
+    src: url('../assets/fonts/rajdhani-700.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+ body { font-family: 'Nunito', sans-serif; }
+
+        [data-bs-theme="light"] {
+            --nav-bg:      #1a1f3c;
+            --price-color: #16a34a;
+            --img-bg:      #f0f2f8;
+            --sold-color:  #6b7280;
+        }
+        [data-bs-theme="dark"] {
+            --bs-body-bg:      #0f1117;
+            --bs-card-bg:      #1a1f2e;
+            --bs-border-color: #2a3050;
+            --nav-bg:          #111420;
+            --price-color:     #22c55e;
+            --img-bg:          #111420;
+            --sold-color:      #545e7a;
+        }
+
+        /* ── NAVBAR ── */
+        .navbar-gz { background: var(--nav-bg) !important; border-bottom: 3px solid #2563eb; }
+        .brand-wrap { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+        .brand-logo { width: 42px; height: 42px; object-fit: cover; object-position: center; border-radius: 50%; border: 2px solid #2563eb; flex-shrink: 0; }
+        .brand-name { font-family: 'Rajdhani', sans-serif; font-size: 22px; font-weight: 700; color: #fff; line-height: 1.1; white-space: nowrap; }
+        .brand-name span { color: #3b82f6; }
+        .brand-sub { font-size: 10px; color: rgba(255,255,255,0.4); letter-spacing: 1.5px; text-transform: uppercase; display: block; white-space: nowrap; }
+
+        /* ── SVG ICON CLASSES (matches index.php) ── */
+        .icon {
+            width: 18px; height: 18px;
+            display: inline-block; vertical-align: middle;
+            filter: brightness(0);
+        }
+        .icon-sm {
+            width: 15px; height: 15px;
+            display: inline-block; vertical-align: middle;
+        }
+        .icon-md {
+            width: 20px; height: 20px;
+            display: inline-block; vertical-align: middle;
+        }
+        .icon-white { filter: brightness(0) invert(1); }
+        [data-bs-theme="dark"] .icon:not(.icon-white) { filter: brightness(0) invert(1); }
+
+        /* ── THEME BUTTON ── */
+        .btn-theme { width: 34px; height: 34px; padding: 0; display: flex; align-items: center; justify-content: center; border-color: rgba(255,255,255,0.15); color: rgba(255,255,255,0.8); }
+        .btn-theme:hover { background: rgba(255,255,255,0.1); color: #fff; }
+
+        /* ── PRODUCT IMAGE BOX ── */
+        .product-img-wrap {
+            width: 100%;
+            height: 380px;
+            background: var(--img-bg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .product-img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            padding: 12px;
+        }
+        .no-img-box {
+            width: 100%;
+            height: 380px;
+            background: var(--bs-secondary-bg);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--bs-secondary-color);
+            font-size: 13px;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+                .icon {
+            width: 18px;
+            height: 18px;
+            display: inline-block;
+            vertical-align: middle;
+            /* Default: render in current body text color via filter */
+            filter: brightness(0);              /* makes it black */
+        }
+        .icon-sm {
+            width: 15px;
+            height: 15px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        /* White icons — used inside the dark navbar */
+        .icon-white {
+            filter: brightness(0) invert(1);   /* makes it white */
+        }
+
+        /* ── PRICE & SOLD ── */
+        .price-display { font-size: 32px; font-weight: 800; color: var(--price-color); }
+        .sold-count {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 13px;
+            color: var(--sold-color);
+            margin-top: 4px;
+        }
+        .sold-count span { font-weight: 700; }
+
+        /* ── QTY CONTROLS ── */
+        .qty-controls { width: fit-content; }
+        .qty-controls .form-control { width: 60px; text-align: center; }
+
+        /* ── BUTTONS ── */
+        .btn-action { font-size: 15px; font-weight: 700; padding: 12px; }
+
+        body, .card, .navbar { transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; }

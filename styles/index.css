@@ -1,0 +1,403 @@
+ @font-face {
+    font-family: 'Nunito';
+    src: url('../assets/fonts/nunito-regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Nunito';
+    src: url('../assets/fonts/nunito-600.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Nunito';
+    src: url('../assets/fonts/nunito-700.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Rajdhani';
+    src: url('../assets/fonts/rajdhani-regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Rajdhani';
+    src: url('../assets/fonts/rajdhani-700.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+body {
+    font-family: 'Nunito', sans-serif;
+}
+
+[data-bs-theme="light"] {
+    --bs-body-bg:    #f2f4f8;
+    --bs-body-color: #1a1f3c;
+    --nav-bg:        #1a1f3c;
+    --card-border:   #e2e6ef;
+    --price-color:   #16a34a;
+    --muted-text:    #9ca3af;
+    --img-bg:        #f0f2f8;
+}
+
+/* ── CSS VARIABLES: DARK THEME ── */
+[data-bs-theme="dark"] {
+    --bs-body-bg:      #0f1117;
+    --bs-body-color:   #e8ecf4;
+    --bs-card-bg:      #1a1f2e;
+    --bs-border-color: #2a3050;
+    --nav-bg:          #111420;
+    --card-border:     #2a3050;
+    --price-color:     #22c55e;
+    --muted-text:      #545e7a;
+    --img-bg:          #111420;
+}
+
+/* ── NAVBAR ── */
+.navbar-gz {
+    background: var(--nav-bg) !important;
+    border-bottom: 3px solid #2563eb;
+}
+
+.brand-wrap {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.brand-logo {
+    width: 42px;
+    height: 42px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    border: 2px solid #2563eb;
+    flex-shrink: 0;
+}
+
+.brand-name {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.1;
+    white-space: nowrap;
+}
+
+.brand-name span  { color: #3b82f6; }
+
+.brand-sub {
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.4);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    display: block;
+    white-space: nowrap;
+}
+
+/* ── THEME TOGGLE BUTTON ── */
+.btn-theme {
+    width: 34px;
+    height: 34px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-color: rgba(255, 255, 255, 0.15);
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.btn-theme:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+/* ── SVG ICON HELPERS ── */
+.icon {
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    vertical-align: middle;
+    filter: brightness(0); /* black by default */
+}
+
+.icon-sm {
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* White — used inside dark navbar */
+.icon-white {
+    filter: brightness(0) invert(1);
+}
+
+/* Dark mode: flip all body icons to white */
+[data-bs-theme="dark"] .icon:not(.icon-white) {
+    filter: brightness(0) invert(1);
+}
+
+/* ── PRODUCT CARD ── */
+.product-card {
+    border-color: var(--card-border);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    height: 100%;
+}
+
+.product-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+    border-color: #2563eb;
+}
+
+/* ── PRODUCT IMAGE BOX ── */
+.product-img-wrap {
+    width: 100%;
+    height: 160px;
+    background: var(--img-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px 4px 0 0;
+    overflow: hidden;
+}
+
+.product-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 6px;
+}
+
+.no-img {
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    font-size: 12px;
+    color: var(--muted-text);
+    background: var(--bs-secondary-bg);
+    border-radius: 4px 4px 0 0;
+}
+
+/* ── PRICE & STOCK ROW ── */
+.price-text {
+    color: var(--price-color);
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.stock-sold-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 11px;
+    color: var(--muted-text);
+}
+
+.section-divider {
+    border-color: var(--card-border);
+}
+
+/* ── CAROUSEL ── */
+.carousel-img {
+    height: 420px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.45);
+    border-radius: 8px;
+    padding: 12px 20px;
+    bottom: 30px;
+}
+
+.carousel-title {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    margin: 0 0 4px 0;
+}
+
+.carousel-desc {
+    font-size: 14px;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+@media (max-width: 576px) {
+    .carousel-img { height: 200px; }
+}
+
+/* ── CATEGORY NAV BAR ── */
+.category-nav {
+    background: var(--bs-body-bg);
+    border-color: var(--card-border) !important;
+    position: relative;
+    z-index: 1000;
+}
+
+.category-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+}
+
+.category-list::-webkit-scrollbar { display: none; }
+
+.category-item {
+    flex-shrink: 0;
+    position: relative;
+}
+
+.category-link {
+    display: block;
+    padding: 11px 16px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--bs-body-color);
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s, border-color 0.2s;
+    cursor: pointer;
+}
+
+.category-link:hover,
+.mega-parent:hover > .category-link {
+    color: #2563eb;
+    border-bottom-color: #2563eb;
+}
+
+.category-link.active {
+    color: #2563eb;
+    border-bottom-color: #2563eb;
+}
+
+/* ── MEGA MENU ── */
+.mega-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 600px;
+    background: var(--bs-card-bg, #fff);
+    border: 1px solid var(--bs-border-color, #dee2e6);
+    border-top: 3px solid #2563eb;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    z-index: 9999;
+    padding: 20px;
+}
+
+.mega-parent:hover .mega-menu { display: block; }
+
+.mega-inner {
+    display: flex;
+    gap: 24px;
+}
+
+.mega-col {
+    flex: 1;
+    min-width: 130px;
+}
+
+.mega-heading {
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #2563eb;
+    margin-bottom: 10px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--bs-border-color, #dee2e6);
+}
+
+.mega-link {
+    display: block;
+    font-size: 13px;
+    color: var(--bs-body-color);
+    text-decoration: none;
+    padding: 4px 0;
+    transition: color 0.15s, padding-left 0.15s;
+}
+
+.mega-link:hover {
+    color: #2563eb;
+    padding-left: 6px;
+}
+
+/* ── MEGA MENU: RECOMMENDED PRODUCTS ── */
+.mega-products { min-width: 160px; }
+
+.mega-product-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: var(--bs-body-color);
+    padding: 5px 0;
+    border-bottom: 1px solid var(--bs-border-color, #dee2e6);
+    transition: color 0.15s;
+}
+
+.mega-product-item:last-child { border-bottom: none; }
+.mega-product-item:hover      { color: #2563eb; }
+
+.mega-product-item img {
+    width: 36px;
+    height: 36px;
+    object-fit: cover;
+    border-radius: 4px;
+    border: 1px solid var(--bs-border-color, #dee2e6);
+    flex-shrink: 0;
+}
+
+.mega-no-img {
+    width: 36px;
+    height: 36px;
+    border-radius: 4px;
+    background: var(--bs-secondary-bg, #e9ecef);
+    flex-shrink: 0;
+}
+
+.mega-product-name {
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.3;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.mega-product-price {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--price-color);
+}
+
+/* Dark mode: mega menu background override */
+[data-bs-theme="dark"] .mega-menu {
+    background: #1a1f2e;
+    border-color: #2a3050;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* ── SMOOTH THEME TRANSITIONS ── */
+body, .card, .navbar, .btn, input, footer {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}

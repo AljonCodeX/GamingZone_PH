@@ -1,0 +1,200 @@
+ @font-face {
+    font-family: 'Nunito';
+    src: url('../../assets/fonts/nunito-regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Nunito';
+    src: url('../../assets/fonts/nunito-600.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Nunito';
+    src: url('../../assets/fonts/nunito-700.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Rajdhani';
+    src: url('../../assets/fonts/rajdhani-regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Rajdhani';
+    src: url('../../assets/fonts/rajdhani-700.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+        /* ── BASE ── */
+        body { font-family: 'Nunito', sans-serif; min-height: 100vh; }
+
+        /* ── DARK THEME ── */
+        [data-bs-theme="dark"] {
+            --bs-body-bg:      #0f1117;
+            --bs-body-color:   #e8ecf4;
+            --bs-card-bg:      #1a1f2e;
+            --bs-border-color: #2a3050;
+            --nav-bg:          #111420;
+            --label-color:     rgba(255,255,255,0.45);
+            --value-bg:        rgba(255,255,255,0.05);
+            --value-border:    #2a3050;
+            --price-color:     #22c55e;
+            --img-bg:          #111420;
+            --muted-text:      rgba(255,255,255,0.45);
+        }
+
+        /* ── LIGHT THEME ── */
+        [data-bs-theme="light"] {
+            --nav-bg:          #1a1f3c;
+            --label-color:     #6b7280;
+            --value-bg:        #f8f9fa;
+            --value-border:    #dee2e6;
+            --price-color:     #16a34a;
+            --img-bg:          #f0f2f8;
+            --muted-text:      #6b7280;
+        }
+
+        /* ── NAVBAR ── */
+        .navbar-gz { background: var(--nav-bg) !important; border-bottom: 3px solid #2563eb; }
+        .brand-wrap { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+        .brand-logo { width: 40px; height: 40px; object-fit: cover; object-position: center; border-radius: 50%; border: 2px solid #2563eb; flex-shrink: 0; }
+        .brand-name { font-family: 'Rajdhani', sans-serif; font-size: 20px; font-weight: 700; color: #fff; line-height: 1.1; white-space: nowrap; }
+        .brand-name span { color: #3b82f6; }
+        .brand-sub { font-size: 10px; color: rgba(255,255,255,0.35); letter-spacing: 1.5px; text-transform: uppercase; display: block; }
+
+        /* ── THEME BUTTON ── */
+        .btn-theme { width: 34px; height: 34px; padding: 0; display: flex; align-items: center; justify-content: center; border-color: rgba(255,255,255,0.15); color: rgba(255,255,255,0.8); }
+        .btn-theme:hover { background: rgba(255,255,255,0.1); color: #fff; }
+
+        /* ── SVG ICON HELPERS ── */
+        .icon    { width: 18px; height: 18px; display: inline-block; vertical-align: middle; }
+        .icon-sm { width: 15px; height: 15px; display: inline-block; vertical-align: middle; flex-shrink: 0; }
+        .icon-white  { filter: brightness(0) invert(1); }
+        .icon-muted  { filter: brightness(0) invert(0.5); }
+        .icon-green  { filter: brightness(0) saturate(100%) invert(55%) sepia(80%) saturate(400%) hue-rotate(100deg); }
+        .icon-red    { filter: brightness(0) saturate(100%) invert(27%) sepia(90%) saturate(500%) hue-rotate(330deg); }
+        .icon-yellow { filter: brightness(0) saturate(100%) invert(85%) sepia(60%) saturate(400%) hue-rotate(10deg); }
+        [data-bs-theme="dark"]  .icon:not(.icon-white):not(.icon-muted):not(.icon-green):not(.icon-red):not(.icon-yellow) { filter: brightness(0) invert(1); }
+        [data-bs-theme="light"] .icon:not(.icon-white):not(.icon-muted):not(.icon-green):not(.icon-red):not(.icon-yellow) { filter: brightness(0); }
+
+        /* ── BREADCRUMB ── */
+        .breadcrumb-item a { color: #3b82f6; text-decoration: none; font-size: 13px; }
+        .breadcrumb-item a:hover { text-decoration: underline; }
+        .breadcrumb-item.active { font-size: 13px; color: var(--muted-text); }
+        .breadcrumb-item + .breadcrumb-item::before { color: var(--muted-text); }
+
+        /* ── MAIN CARD ── */
+        .main-card {
+            background: var(--bs-card-bg);
+            border: 1px solid var(--bs-border-color);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .card-top-bar {
+            background: #2563eb;
+            padding: 14px 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .card-top-bar h5 {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: #fff;
+            margin: 0;
+        }
+
+        /* ── PRODUCT IMAGE ── */
+        .product-img-wrap {
+            width: 100%;
+            height: 300px;
+            background: var(--img-bg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--bs-border-color);
+        }
+        .product-img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            padding: 12px;
+        }
+        .no-img-box {
+            width: 100%;
+            height: 300px;
+            background: var(--img-bg);
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            color: var(--muted-text);
+            font-size: 13px;
+            border: 1px solid var(--bs-border-color);
+        }
+
+        /* ── DETAIL FIELDS ── */
+        .field-label {
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            color: var(--label-color);
+            margin-bottom: 4px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .field-value {
+            background: var(--value-bg);
+            border: 1px solid var(--value-border);
+            border-radius: 6px;
+            padding: 9px 13px;
+            font-size: 14px;
+            min-height: 40px;
+            display: flex;
+            align-items: center;
+        }
+        .field-value.desc-field {
+            min-height: 70px;
+            align-items: flex-start;
+            line-height: 1.6;
+        }
+        .price-field {
+            color: var(--price-color);
+            font-weight: 800;
+            font-size: 22px;
+        }
+
+        /* ── SECTION DIVIDER ── */
+        .section-label {
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--muted-text);
+            margin: 20px 0 12px 0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .section-label::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--bs-border-color);
+        }
+
+        /* ── FOOTER ── */
+        footer { border-top: 1px solid var(--bs-border-color); color: var(--muted-text); font-size: 12px; }
+
+        body, .main-card, .navbar { transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; }

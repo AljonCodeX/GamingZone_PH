@@ -1,0 +1,197 @@
+ @font-face {
+    font-family: 'Nunito';
+    src: url('../../assets/fonts/nunito-regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Nunito';
+    src: url('../../assets/fonts/nunito-600.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Nunito';
+    src: url('../../assets/fonts/nunito-700.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Rajdhani';
+    src: url('../../assets/fonts/rajdhani-regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Rajdhani';
+    src: url('../../assets/fonts/rajdhani-700.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+       body {
+            font-family: 'Nunito', sans-serif;
+            background-color: #0f1117;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 24px 16px;
+        }
+
+        /* ── CARD ── */
+        .login-card {
+            background: #1a1f2e;
+            border: 1px solid #2a3050;
+            border-radius: 12px;
+            width: 100%;
+            max-width: 420px;
+            padding: 32px 32px 28px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+        }
+
+        /* ── LOGO ── */
+        .logo-wrap {
+            text-align: center;
+            margin-bottom: 6px;
+        }
+        .logo-wrap img.site-logo {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 50%;
+            box-shadow: 0 0 0 3px #1a1f2e, 0 0 0 5px #2563eb;
+        }
+
+        /* ── ADMIN BADGE ── */
+        .admin-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(59, 130, 246, 0.15);
+            border: 1px solid rgba(59, 130, 246, 0.35);
+            color: #93c5fd;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            padding: 4px 14px;
+            border-radius: 20px;
+            margin-top: 10px;
+        }
+
+        /* ── DIVIDER ── */
+        .section-divider {
+            border-color: #2a3050;
+            margin: 20px 0;
+        }
+
+        /* ── SECTION TITLE ── */
+        .section-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: rgba(255, 255, 255, 0.6);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 7px;
+        }
+
+        /* ── FORM LABELS ── */
+        .form-label {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.45);
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* ── INPUTS ── */
+        .form-control {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1.5px solid #2a3050;
+            color: #e8ecf4;
+            border-radius: 7px;
+            padding: 10px 14px;
+            font-family: 'Nunito', sans-serif;
+        }
+        .form-control::placeholder { color: rgba(255, 255, 255, 0.2); }
+        .form-control:focus {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: #3b82f6;
+            color: #e8ecf4;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+        }
+
+        /* ── LOGIN BUTTON ── */
+        .btn-login {
+            background: #2563eb;
+            border: none;
+            color: white;
+            font-weight: 700;
+            font-size: 15px;
+            padding: 11px;
+            border-radius: 7px;
+            width: 100%;
+            cursor: pointer;
+            transition: background 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        .btn-login:hover { background: #1d4ed8; }
+
+        /* ── ALERT BOXES ── */
+        .alert-error {
+            background: rgba(220, 53, 69, 0.15);
+            border: 1px solid rgba(220, 53, 69, 0.3);
+            color: #f87171;
+            font-size: 13px;
+            border-radius: 7px;
+            padding: 10px 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+        .alert-warning-box {
+            background: rgba(245, 158, 11, 0.12);
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            color: #fcd34d;
+            font-size: 13px;
+            border-radius: 7px;
+            padding: 10px 14px;
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+
+        /* ── BACK LINK ── */
+        .back-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            margin-top: 20px;
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.25);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .back-link:hover { color: rgba(255, 255, 255, 0.55); }
+
+        /* ── SVG ICON HELPERS ── */
+        .icon-sm     { width: 15px; height: 15px; display: inline-block; vertical-align: middle; flex-shrink: 0; }
+        .icon-white  { filter: brightness(0) invert(1); }
+        .icon-muted  { filter: brightness(0) invert(0.5); }
+        .icon-blue   { filter: brightness(0) saturate(100%) invert(55%) sepia(80%) saturate(500%) hue-rotate(200deg); }
+        .icon-red    { filter: brightness(0) saturate(100%) invert(27%) sepia(90%) saturate(500%) hue-rotate(330deg); }
+        .icon-yellow { filter: brightness(0) saturate(100%) invert(85%) sepia(60%) saturate(400%) hue-rotate(10deg); }

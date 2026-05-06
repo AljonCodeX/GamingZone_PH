@@ -1,0 +1,76 @@
+ @font-face {
+    font-family: 'Nunito';
+    src: url('../assets/fonts/nunito-regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Nunito';
+    src: url('../assets/fonts/nunito-600.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Nunito';
+    src: url('../assets/fonts/nunito-700.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Rajdhani';
+    src: url('../assets/fonts/rajdhani-regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Rajdhani';
+    src: url('../assets/fonts/rajdhani-700.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+        body { font-family: 'Nunito', sans-serif; }
+
+        [data-bs-theme="light"] {
+            --nav-bg:      #1a1f3c;
+            --price-color: #16a34a;
+        }
+        [data-bs-theme="dark"] {
+            --bs-body-bg:      #0f1117;
+            --bs-card-bg:      #1a1f2e;
+            --bs-border-color: #2a3050;
+            --nav-bg:          #111420;
+            --price-color:     #22c55e;
+        }
+
+        /* ── NAVBAR ── */
+        .navbar-gz { background: var(--nav-bg) !important; border-bottom: 3px solid #2563eb; }
+        .brand-wrap { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+        .brand-logo { width: 42px; height: 42px; object-fit: cover; object-position: center; border-radius: 50%; border: 2px solid #2563eb; flex-shrink: 0; }
+        .brand-name { font-family: 'Rajdhani', sans-serif; font-size: 22px; font-weight: 700; color: #fff; line-height: 1.1; white-space: nowrap; }
+        .brand-name span { color: #3b82f6; }
+        .brand-sub { font-size: 10px; color: rgba(255,255,255,0.4); letter-spacing: 1.5px; text-transform: uppercase; display: block; white-space: nowrap; }
+
+        /* ── THEME BUTTON ── */
+        .btn-theme { width: 34px; height: 34px; padding: 0; display: flex; align-items: center; justify-content: center; border-color: rgba(255,255,255,0.15); color: rgba(255,255,255,0.8); }
+        .btn-theme:hover { background: rgba(255,255,255,0.1); color: #fff; }
+
+        /* ── SVG ICON CLASSES ── */
+        .icon    { width: 18px; height: 18px; display: inline-block; vertical-align: middle; filter: brightness(0); }
+        .icon-sm { width: 15px; height: 15px; display: inline-block; vertical-align: middle; }
+        .icon-white { filter: brightness(0) invert(1); }
+        .icon-muted { filter: brightness(0) invert(0.5); }
+        [data-bs-theme="dark"] .icon:not(.icon-white):not(.icon-muted) { filter: brightness(0) invert(1); }
+
+        /* ── FORM ── */
+        .form-label { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; }
+        .preview-img { max-width: 100%; max-height: 140px; object-fit: cover; border-radius: 6px; display: none; margin-top: 8px; }
+
+        /* ── TABLE ── */
+        .item-img { width: 42px; height: 42px; object-fit: cover; border-radius: 4px; }
+        .no-img   { width: 42px; height: 42px; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 9px; }
+        .price-col { color: var(--price-color); font-weight: 700; }
+
+        /* ── SMOOTH TRANSITIONS ── */
+        body, .card, .navbar, footer {
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+        }
