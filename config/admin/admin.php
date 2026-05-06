@@ -185,6 +185,7 @@ unset($_SESSION['admin_msg']);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Panel — Gaming Zone PH</title>
     <script>(function(){var t=localStorage.getItem('gz_admin_theme')||'dark';document.documentElement.setAttribute('data-bs-theme',t);})();</script>
+    <link rel="icon" type="image/png" href="../../assets/images/logo.png">
     <link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../styles/admin/admin.css">
 </head>

@@ -33,7 +33,8 @@ $admin_username = $_SESSION['admin_username'];
     <title><?php echo htmlspecialchars($item['name']); ?> — Admin View</title>
 
     <script>(function(){var t=localStorage.getItem('gz_admin_theme')||'dark';document.documentElement.setAttribute('data-bs-theme',t);})();</script>
-
+    
+    <link rel="icon" type="image/png" href="../../assets/images/logo.png">
     <link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../styles/admin/view_item.css">
 </head>

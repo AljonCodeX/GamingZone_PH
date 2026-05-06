@@ -75,6 +75,7 @@ function isCatActive(string $value): string {
         document.documentElement.setAttribute('data-bs-theme', _t);
     </script>
 
+    <link rel="icon" type="image/png" href="/assets/images/logo.png">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles/index.css">
 </head>

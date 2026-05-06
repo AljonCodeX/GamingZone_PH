@@ -76,6 +76,7 @@ $cart_count = isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0;
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sell a Product — Gaming Zone PH</title>
     <script>(function(){var t=localStorage.getItem('gz_theme')||'light';document.documentElement.setAttribute('data-bs-theme',t);})();</script>
+    <link rel="icon" type="image/png" href="/assets/images/logo.png">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles/sell.css">
 </head>
